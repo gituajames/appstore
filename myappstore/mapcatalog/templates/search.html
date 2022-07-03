@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search results</title>
+</head>
+<body>
+{% if resultmap %}
+<h1>maps matched your search</h1>
+{% for map in resultmap %}
+<p>{{ map.map_title }} sheet {{ map.map_sheet_number }}</p>
+{% endfor %}
+{% else %}
+<p>no maps matching your query seems we do not have it</p>
+{% endif %}
+</body>
+</html>

@@ -5,6 +5,10 @@
     <title>geomird map catalog</title>
 </head>
 <body>
+<form action="{% url 'search' %}" method="get">
+    <input type="search" name="search" id="">
+    <button type="submit">search map</button>
+</form>
 {% if allmaps %}
 {% for map in allmaps %}
 <p>{{ map.map_title }} sheet {{map.map_sheet_number }}</p>

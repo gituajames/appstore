@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>geomird map catalog</title>
+</head>
+<body>
+{% if allmaps %}
+{% for map in allmaps %}
+<p>{{ map.map_title }} sheet {{map.map_sheet_number }}</p>
+{% endfor %}
+
+{% else %}
+<p>no maps present</p>
+
+{% endif %}
+</body>
+</html>
